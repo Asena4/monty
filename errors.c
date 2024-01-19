@@ -12,7 +12,7 @@
  * (7) => When stack is empty for pop.
  * (8) => When stack is too short for operation.
  */
-void err(int error_code, ...)
+void error(int error_code, ...)
 {
 	va_list ag;
 	char *op;
@@ -47,14 +47,14 @@ void err(int error_code, ...)
 }
 
 /**
- * more_err - handles errors.
- * @error_code: The error codes are the following:
+ * more_error - handles errors.
+ * @error_code: error codes are as follows:
  * (6) => When the stack is empty for pint.
  * (7) => When the stack is empty for pop.
  * (8) => When stack is too short for operation.
  * (9) => Division by zero.
  */
-void more_err(int error_code, ...)
+void more_error(int error_code, ...)
 {
 	va_list ag;
 	char *op;
@@ -88,12 +88,12 @@ void more_err(int error_code, ...)
 }
 
 /**
- * string_err - handles errors.
- * @error_code: The error codes are the following:
- * (10) ~> The number inside a node is outside ASCII bounds.
- * (11) ~> The stack is empty.
+ * string_error - handles errors.
+ * @error_code: error codes are as follows:
+ * (10) ~> number inside a node is outside ASCII bounds.
+ * (11) ~> stack is empty.
  */
-void string_err(int error_code, ...)
+void string_error(int error_code, ...)
 {
 	va_list ag;
 	int l_num;
